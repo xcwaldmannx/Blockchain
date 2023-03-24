@@ -4,10 +4,41 @@
     <Filter Include="src">
       <UniqueIdentifier>{e50577f5-1ab7-4b99-90bf-a38ed5e3ec89}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Block">
+      <UniqueIdentifier>{40b678ef-e128-42fa-bb8f-a759d00f5d47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\SHA256">
+      <UniqueIdentifier>{bc5cbd76-5111-4c3b-891e-41fa2bbf5617}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="Block.cpp">
+      <Filter>src\Block</Filter>
+    </ClCompile>
+    <ClCompile Include="sha256.cpp">
+      <Filter>src\SHA256</Filter>
+    </ClCompile>
+    <ClCompile Include="Blockchain.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Block.h">
+      <Filter>src\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="sha256.h">
+      <Filter>src\SHA256</Filter>
+    </ClInclude>
+    <ClInclude Include="Blockchain.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="license.txt">
+      <Filter>src\SHA256</Filter>
+    </Text>
   </ItemGroup>
 </Project>

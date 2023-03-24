@@ -127,7 +127,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Block.cpp" />
+    <ClCompile Include="Blockchain.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="sha256.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Block.h" />
+    <ClInclude Include="Blockchain.h" />
+    <ClInclude Include="sha256.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="license.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

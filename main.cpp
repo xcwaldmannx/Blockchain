@@ -1,16 +1,19 @@
-#include <iostream>
+#include "Blockchain.h"
 
-#include <string>
+#include <iostream>
 
 int main() {
 
-	std::cout << "fuck" << std::endl;
+    Blockchain chain = Blockchain();
 
-	std::string name;
-	std::cin >> name;
+    std::cout << "Mining block 1..." << std::endl;
+    chain.addBlock(Block(1, "Block 1 Data"));
 
-	std::cout << name << std::endl;
-	std::cin >> name;
+    std::cout << "Mining block 2..." << std::endl;
+    chain.addBlock(Block(2, "Block 2 Data"));
+
+    std::cout << "Mining block 3..." << std::endl;
+    chain.addBlock(Block(3, "Block 3 Data"));
 
 	return 0;
 }

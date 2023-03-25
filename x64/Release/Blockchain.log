@@ -1,7 +1,15 @@
-﻿  Blockchain.cpp
+﻿  KeySet.cpp
+C:\Users\xcwal\source\repos\Blockchain\Blockchain\MatrixNxM.h(65,1): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\xcwal\source\repos\Blockchain\Blockchain\MatrixNxM.h(66,1): warning C4267: 'argument': conversion from 'size_t' to 'uint16_t', possible loss of data
+  PublicKey.cpp
+C:\Users\xcwal\source\repos\Blockchain\Blockchain\MatrixNxM.h(65,1): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\xcwal\source\repos\Blockchain\Blockchain\MatrixNxM.h(66,1): warning C4267: 'argument': conversion from 'size_t' to 'uint16_t', possible loss of data
+  main.cpp
+C:\Users\xcwal\source\repos\Blockchain\Blockchain\MatrixNxM.h(65,1): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\xcwal\source\repos\Blockchain\Blockchain\MatrixNxM.h(66,1): warning C4267: 'argument': conversion from 'size_t' to 'uint16_t', possible loss of data
   Generating code
-  1 of 217 functions ( 0.5%) were compiled, the rest were copied from previous compilation.
+  2 of 357 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+    4 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Blockchain.vcxproj -> C:\Users\xcwal\source\repos\Blockchain\x64\Release\Blockchain.exe

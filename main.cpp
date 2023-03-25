@@ -2,8 +2,9 @@
 
 #include <iostream>
 
-int main() {
+#include "KeySet.h"
 
+void mineBlocks() {
     Blockchain chain = Blockchain();
 
     std::cout << "Mining block 1..." << std::endl;
@@ -14,6 +15,20 @@ int main() {
 
     std::cout << "Mining block 3..." << std::endl;
     chain.addBlock(Block(3, "Block 3 Data"));
+}
+
+int main() {
+
+    KeySet keySet = KeySet(10);
+    std::cout << "KeySet:" << std::endl;
+    keySet.print();
+
+    PublicKeyCode pkc = keySet.generatePublicKeyCode(5);
+    std::cout << "Public Key Code:" << std::endl;
+    pkc.print();
+
+    std::string s;
+    std::cin >> s;
 
 	return 0;
 }

@@ -1,5 +1,7 @@
 #pragma once
 
+#include <random>
+
 #include "PrivateKey.h"
 #include "MatrixNxM.h"
 #include "VectorN.h"
@@ -11,7 +13,7 @@ struct PublicKeyCode {
 	void print() const {
 		std::cout << "Public Key:" << std::endl;
 		pk.print();
-		std::cout << "Public Key Mod:" << std::endl;
+		std::cout << "Public Key Mod+Error:" << std::endl;
 		pkMod.print();
 	}
 };
@@ -26,7 +28,8 @@ public:
 	void print() const;
 
 private:
+	static int generateError(int sigma);
+
 	size_t m_size = 0;
 	MatrixNxM m_pk{};
-	VectorN m_pk_mod{};
 };

@@ -4,7 +4,7 @@ PrivateKey PrivateKey::generateKey(size_t size) {
 	PrivateKey sk = PrivateKey();
 	sk.m_size = size;
 	sk.m_sk = VectorN(sk.m_size);
-	sk.m_sk.populate(1, 9);
+	sk.m_sk.populate(10, 99);
 	return sk;
 }
 

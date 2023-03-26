@@ -19,13 +19,15 @@ void mineBlocks() {
 
 int main() {
 
-    KeySet keySet = KeySet(10);
+    KeySet keySet = KeySet(20);
     std::cout << "KeySet:" << std::endl;
     keySet.print();
 
     PublicKeyCode pkc = keySet.generatePublicKeyCode(5);
     std::cout << "Public Key Code:" << std::endl;
     pkc.print();
+
+    std::cout << "done." << std::endl;
 
     std::string s;
     std::cin >> s;

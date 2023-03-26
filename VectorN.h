@@ -62,7 +62,6 @@ public:
 		return m_data[index];
 	}
 
-private:
 	size_t m_size = 0;
 	std::vector<uint16_t> m_data{};
 };

@@ -10,6 +10,14 @@ struct PublicKeyCode {
 	MatrixNxM pk{};
 	VectorN pkMod{};
 
+	std::vector<std::vector<uint16_t>> getRawKey() const {
+		return pk.m_data;
+	}
+
+	std::vector<uint16_t> getRawAnswer() const {
+		return pkMod.m_data;
+	}
+
 	void print() const {
 		std::cout << "Public Key:" << std::endl;
 		pk.print();

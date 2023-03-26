@@ -147,6 +147,7 @@
     <ClInclude Include="PrivateKey.h" />
     <ClInclude Include="PublicKey.h" />
     <ClInclude Include="sha256.h" />
+    <ClInclude Include="SystemSolver.h" />
     <ClInclude Include="VectorN.h" />
   </ItemGroup>
   <ItemGroup>

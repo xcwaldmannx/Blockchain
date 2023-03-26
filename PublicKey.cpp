@@ -25,7 +25,7 @@ int PublicKey::generateError(int sigma) {
 	std::mt19937 gen(rd());
 	std::uniform_real_distribution<> dis(-sigma, sigma);
 	int error = dis(gen);
-	std::cout << "err: " << ((error >= 0) ? "+" : "") << error << std::endl;
+	//std::cout << "err: " << ((error >= 0) ? "+" : "") << error << std::endl;
 	return error;
 }
 

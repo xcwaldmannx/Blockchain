@@ -10,12 +10,6 @@
     <Filter Include="src\SHA256">
       <UniqueIdentifier>{bc5cbd76-5111-4c3b-891e-41fa2bbf5617}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Math">
-      <UniqueIdentifier>{05958d4d-b0b4-419f-ac6b-490133bd4196}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Encryption">
-      <UniqueIdentifier>{f47c94a8-f0e3-4e2f-826c-e26e398a9166}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\SystemSolver">
       <UniqueIdentifier>{67c7e6fd-4207-4190-bca8-fd35504ddcef}</UniqueIdentifier>
     </Filter>
@@ -33,15 +27,6 @@
     <ClCompile Include="Blockchain.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="KeySet.cpp">
-      <Filter>src\Encryption</Filter>
-    </ClCompile>
-    <ClCompile Include="PublicKey.cpp">
-      <Filter>src\Encryption</Filter>
-    </ClCompile>
-    <ClCompile Include="PrivateKey.cpp">
-      <Filter>src\Encryption</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Block.h">
@@ -52,21 +37,6 @@
     </ClInclude>
     <ClInclude Include="Blockchain.h">
       <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="MatrixNxM.h">
-      <Filter>src\Math</Filter>
-    </ClInclude>
-    <ClInclude Include="VectorN.h">
-      <Filter>src\Math</Filter>
-    </ClInclude>
-    <ClInclude Include="KeySet.h">
-      <Filter>src\Encryption</Filter>
-    </ClInclude>
-    <ClInclude Include="PublicKey.h">
-      <Filter>src\Encryption</Filter>
-    </ClInclude>
-    <ClInclude Include="PrivateKey.h">
-      <Filter>src\Encryption</Filter>
     </ClInclude>
     <ClInclude Include="SystemSolver.h">
       <Filter>src\SystemSolver</Filter>

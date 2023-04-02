@@ -1,10 +1,8 @@
 #include "Blockchain.h"
 
-#include <iostream>
-#include <vector>
+#include <LaBCry.h>
 
-#include "KeySet.h"
-#include "SystemSolver.h"
+#include <iostream>
 
 void mineBlocks() {
     Blockchain chain = Blockchain();
@@ -19,34 +17,31 @@ void mineBlocks() {
     chain.addBlock(Block(3, "Block 3 Data"));
 }
 
+int correct = 0;
+int incorrect = 0;
+
+void run(int bit) {
+    labcry::KeyPair kp = labcry::KeyPair(64, 1000);
+    labcry::PublicKeyNonce nonce = kp.generateNonce();
+    labcry::MessageCoder::encode(nonce, bit);
+    int32_t result = labcry::MessageCoder::decode(kp.getPrivateKey(), nonce);
+
+    if ((result == 0 && bit == 0) || (result == 1 && bit == 1)) {
+        correct++;
+    } else {
+        incorrect++;
+    }
+
+}
+
 int main() {
 
-    KeySet keySet = KeySet(5000);
-    std::cout << "KeySet:" << std::endl;
-    //keySet.print();
-
-    PublicKeyCode pkc = keySet.generatePublicKeyCode(5);
-    std::cout << "Public Key Code:" << std::endl;
-    //pkc.print();
-
-    std::cout << "done." << std::endl;
-    std::cout << "Solving System:" << std::endl;
-
-    std::vector<std::vector<double>> pkDouble;
-    for (const auto& vec : pkc.getRawKey()) {
-        std::vector<double> d_vec(vec.begin(), vec.end());
-        pkDouble.push_back(d_vec);
-    }
-    std::vector<double> pkAnswerDouble;
-    for (int i = 0; i < pkc.getRawAnswer().size(); i++) {
-        pkAnswerDouble.push_back((double) pkc.getRawAnswer()[i]);
+    for (int i = 0; i < 10000; i++) {
+        run(1);
     }
 
-    std::vector<double> solution = SystemSolver::solveSystem(pkDouble, pkAnswerDouble);
-
-    for (int i = 0; i < solution.size(); i++) {
-        std::cout << solution[i] << std::endl;
-    }
+    std::cout << "Correct: " << correct << std::endl;
+    std::cout << "Incorrect: " << incorrect << std::endl;
 
     std::string s;
     std::cin >> s;
